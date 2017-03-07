@@ -1,12 +1,12 @@
-var React = require('react');
+// var React = require('react');
 
-var Genres = function(props) {
+// var Genres = function(props) {
 
   
 
-  return (
+//   return (
 
-  );
-};
+//   );
+// };
 
-module.exports = Genres;
+// module.exports = Genres;

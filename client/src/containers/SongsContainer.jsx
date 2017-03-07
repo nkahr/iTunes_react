@@ -16,24 +16,27 @@ var SongsContainer = React.createClass({
     }.bind(this);
 
     request.send();
-    this.getGenres();
+    // this.getGenres();
   },
 
-  getGenres: function() {
-    var url = "https://itunes.apple.com/WebObjects/MZStoreServices.woa/ws/genres";
-    var request = new XMLHttpRequest();
-    request.open('get', url);
+  // getGenres: function() {
+  //   var url = "https://itunes.apple.com/WebObjects/MZStoreServices.woa/ws/genres";
+  //   var request = new XMLHttpRequest();
+  //   request.open('get', url);
 
-    request.onload = function(){
-      if (request.status !== 200) return;
-      var data = JSON.parse(request.responseText);
-      var genreArray = data["34"]["subgenres"];
-      console.log(genreArray);
-      this.setState({genres: genreArray});
-    }.bind(this);
+  //   request.onload = function(){
+  //     console.log(request.status);
+  //     console.log(request.responseText);
+  //     if (request.status !== 200) return;
+  //     var data = JSON.parse(request.responseText);
+  //     console.log("data", data);
+  //     var genreArray = data["34"]["subgenres"];
+  //     // console.log(genreArray);
+  //     this.setState({genres: genreArray});
+  //   }.bind(this);
 
-    request.send();
-  },
+  //   request.send();
+  // },
 
   getInitialState: function () {
     return { songs: [], genres: []};
